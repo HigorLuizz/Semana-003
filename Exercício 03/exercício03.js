@@ -8,6 +8,9 @@ function retornaAquantidadeDeParesEimparesDigitados (lista = []){
             contImpar++
         }
     }
-    return "A quantidade de número é de "+lista.length+", sendo "+contPar+" pares e "+contImpar+" impares."
+    return [contPar,contImpar,lista.length];
 }
-retornaAquantidadeDeParesEimparesDigitados([0,1,3,6,5,9,7])
+var par = retornaAquantidadeDeParesEimparesDigitados([0,1,3,6,5,9,7])[0]
+var impar = retornaAquantidadeDeParesEimparesDigitados([0,1,3,6,5,9,7])[1]
+var tamanho = retornaAquantidadeDeParesEimparesDigitados([0,1,3,6,5,9,7])[2]
+console.log("A quantidade de número é de "+tamanho+", sendo "+par+" pares e "+impar+" impares.")
