@@ -1,12 +1,11 @@
-const botao = document.getElementById("btn1");
-botao.style.backgroundColor = "red";
-
-var input = document.getElementById("meuInput")
-
-function imprimirInput(){
-    console.log(input.value)
+function criarVariasDivseTextos(lista = []){
+    const divTextos = document.getElementById('textos')
+    for (var [indice,text] of lista.entries()){
+        const texto4 = document.createElement('div')
+        texto4.classList.add('test'+indice);
+        texto4.innerHTML = text
+        divTextos.append(texto4)
+    }
+    
 }
-var lista = document.getElementsByTagName("ul")
-function adicionarElementosLista(){
-    lista[0].innerHTML += "<li>"+input.value+"</li>"
-}
+criarVariasDivseTextos(["texo 01","texto 02","oi","turu","bom"])
